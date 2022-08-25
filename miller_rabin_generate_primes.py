@@ -1,18 +1,6 @@
 import random
 import time
-
-
-def powmod(b, e, m):
-    B = b
-    result = 1
-    M = m
-    E = e
-    while E > 0:
-        if E % 2 == 1:
-            result = (result * B) % M
-        E //= 2
-        B = pow(B, 2, M)
-    return result
+from gmpy2 import powmod
 
 
 def miller_rabin(n, k):
